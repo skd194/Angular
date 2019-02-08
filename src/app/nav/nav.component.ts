@@ -20,8 +20,8 @@ export class NavComponent implements OnInit {
             next: () => {
                 console.log('Logged In Successfully');
             },
-            error: () => {
-                console.log('Failed to login');
+            error: (error) => {
+                console.log(error);
             }
         };
         this.authService.login(this.userLoginDto)
